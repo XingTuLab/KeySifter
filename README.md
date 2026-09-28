@@ -30,8 +30,7 @@ synthetic input/site, and a **masked** knowledge base (embedding vectors + risk
 labels only — no plaintext) that is enough to run the classification. Release
 archives compress this knowledge base to reduce download size. The full crawl
 corpus, real target lists, original plaintext knowledge base, and private
-validation modules are not included. Bundled samples are non-functional and do
-not authenticate against any real service.
+validation modules are not included. The synthetic fixtures in data/sample/sample_page.html and data/sample/site/ are non-functional and do not authenticate against any real service. The bundled Stage 1 output snapshot uses anonymized paths and is intended only for offline classifier evaluation; see data/sample/README.md.
 
 See **[USAGE.md](USAGE.md)** to collect an authorized URL or run the pipeline on
 your own file. Crawler-specific details are in
