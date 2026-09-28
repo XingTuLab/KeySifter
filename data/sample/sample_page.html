@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample page with planted (fake) credentials</title>
+<!--
+  All secret values below are SYNTHETIC and do not authenticate against any
+  real service. This file exists only to exercise the end-to-end
+  file -> detect -> classify pipeline (scripts/classify_file.py).
+-->
+<script>
+window.__APP_CONFIG__ = {
+  // server-side secrets -> should classify Critical
+  github_token: "ghp_AbCdEfGhIjKlMnOpQrStUvWxYz0123456789",
+  client_secret: "aB3xK9mP2qR7sT1vW5yZ8nC4dF6gH0jLpW",
+  stripe_secret_key: "SYNTHETIC_STRIPE_SERVER_SECRET_51AbCdEfGhIjKlMnOpQrStUv",
+
+  // public-by-design keys -> should classify Potential
+  stripe_publishable_key: "pk_live_51AbCdEfGhIjKlMnOpQrStUvWxYz00demo00key",
+  statsigClientSecret: "client-Ab12Cd34Ef56Gh78Ij90Kl12Mn34Op",
+  mapbox_token: "pk.eyJ1IjoiZGVtbyIsImEiOiJjbGRlbW9rZXkwMDAwMCJ9.AbCdEfGhIjKlMnOp",
+
+  // designed-public / non-credential -> should classify FalsePositive
+  cf_header_name: "CF-Access-Client-Secret",
+  analytics_token: "95445fb6c4114d9182dacd0c24cb2c35",
+  recaptcha_site_key: "6Lc_demoSiteKeyAbCdEfGhIjKlMnOpQrStUvWx"
+};
+</script>
+</head>
+<body>End-to-end pipeline sample.</body>
+</html>

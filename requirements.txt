@@ -1,0 +1,13 @@
+# pip fallback (see environment.yml / INSTALL.md). Pin to taste.
+numpy
+pandas
+tqdm
+matplotlib
+ijson
+openpyxl
+jellyfish
+wordninja
+torch                  # match your CUDA, or CPU build for the sample
+sentence-transformers
+playwright             # then: playwright install chromium
+# stage 3 needs Node + acorn (npm install acorn), not pip

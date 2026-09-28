@@ -1,0 +1,22 @@
+name: web-secret-ae
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - tqdm
+  - matplotlib
+  - ijson
+  - openpyxl
+  - jellyfish
+  # PyTorch: pick the build matching your CUDA, or use the CPU build for the sample.
+  - pytorch
+  - pip:
+      - playwright
+      - sentence-transformers
+      - wordninja
+      # acorn (stage 3) is a Node package — install separately, see INSTALL.md
