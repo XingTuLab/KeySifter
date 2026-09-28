@@ -25,12 +25,7 @@ to a few hundred genuine private-by-design secrets.
 
 ## What's here
 
-This is a code + minimal-data artifact. It ships the pipeline source, a small
-synthetic input/site, and a **masked** knowledge base (embedding vectors + risk
-labels only — no plaintext) that is enough to run the classification. Release
-archives compress this knowledge base to reduce download size. The full crawl
-corpus, real target lists, original plaintext knowledge base, and private
-validation modules are not included. The synthetic fixtures in data/sample/sample_page.html and data/sample/site/ are non-functional and do not authenticate against any real service. The bundled Stage 1 output snapshot uses anonymized paths and is intended only for offline classifier evaluation; see data/sample/README.md.
+This repository contains the KeySifter source code and a small set of test data. For security and privacy, the bundled knowledge base is masked and contains only embedding vectors and risk labels; no plaintext secrets are included.
 
 See **[USAGE.md](USAGE.md)** to collect an authorized URL or run the pipeline on
 your own file. Crawler-specific details are in
