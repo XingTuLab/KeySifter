@@ -10,20 +10,26 @@
 -->
 <script>
 window.__APP_CONFIG__ = {
-  // server-side secrets -> should classify Critical
+  // Deterministic Private-by-design examples.
   github_token: "ghp_AbCdEfGhIjKlMnOpQrStUvWxYz0123456789",
   client_secret: "aB3xK9mP2qR7sT1vW5yZ8nC4dF6gH0jLpW",
+
+  // Semantic-stage example intended to represent a Private-by-design secret.
   stripe_secret_key: "SYNTHETIC_STRIPE_SERVER_SECRET_51AbCdEfGhIjKlMnOpQrStUv",
 
-  // public-by-design keys -> should classify Potential
+  // Semantic-stage examples intended to represent Public-by-design secrets.
   stripe_publishable_key: "pk_live_51AbCdEfGhIjKlMnOpQrStUvWxYz00demo00key",
   statsigClientSecret: "client-Ab12Cd34Ef56Gh78Ij90Kl12Mn34Op",
+
+  // Deterministic Public-by-design example.
   mapbox_token: "pk.eyJ1IjoiZGVtbyIsImEiOiJjbGRlbW9rZXkwMDAwMCJ9.AbCdEfGhIjKlMnOp",
 
-  // designed-public / non-credential -> should classify FalsePositive
-  cf_header_name: "CF-Access-Client-Secret",
+  // Deterministic Non-secret noise examples.
   analytics_token: "95445fb6c4114d9182dacd0c24cb2c35",
-  recaptcha_site_key: "6Lc_demoSiteKeyAbCdEfGhIjKlMnOpQrStUvWx"
+  recaptcha_site_key: "6Lc_demoSiteKeyAbCdEfGhIjKlMnOpQrStUvWx",
+
+  // Negative control: a header name, intentionally not a credential candidate.
+  cf_header_name: "CF-Access-Client-Secret"
 };
 </script>
 </head>
