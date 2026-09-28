@@ -25,7 +25,7 @@ to a few hundred genuine private-by-design secrets.
 
 ## What's here
 
-This repository contains the KeySifter source code and a small set of test data. For security and privacy, the bundled knowledge base is masked and contains only embedding vectors and risk labels; no plaintext secrets are included.
+This repository contains the KeySifter source code and test data. For security and privacy, the bundled knowledge base is masked and contains only embedding vectors and risk labels; no plaintext secrets are included.
 
 See **[USAGE.md](USAGE.md)** to collect an authorized URL or run the pipeline on
 your own file. Crawler-specific details are in
